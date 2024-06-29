@@ -1,0 +1,37 @@
+Objects and Classes in Java
+
+Classes
+
+A class is a blueprint or a template that defines the properties and behavior of an object.
+A class is essentially a design pattern that defines the characteristics of an object, including its data (attributes) and behavior (methods).
+In Java, a class is defined using the class keyword followed by the name of the class.
+
+Objects
+
+An object is an instance of a class, and it represents a real-world entity or concept.
+Objects have their own set of attributes (data) and methods (behavior) that are defined by the class.
+Objects are created using the new keyword followed by the name of the class.
+
+Key Concepts
+
+Inheritance: A class can inherit the properties and behavior of another class using the extends keyword.
+Polymorphism: Objects of different classes can be treated as objects of a common superclass.
+Encapsulation: Classes can hide their internal implementation details and expose only the necessary information to the outside world.
+Abstraction: Classes can represent complex real-world concepts in a simplified way.
+
+Class Components
+
+Fields (or Attributes): These are the data members of a class, which are used to store the state of an object.
+Methods: These are the functions that define the behavior of an object.
+Constructors: These are special methods that are used to initialize objects when they are created.
+
+Object Creation
+Default Constructor: A constructor that takes no arguments and is used to create an object with default values.
+Parameterized Constructor: A constructor that takes one or more arguments and is used to create an object with specific values.
+
+Access Modifiers
+
+Public: Members that are accessible from anywhere in the program.
+Private: Members that are accessible only within the same class.
+Protected: Members that are accessible within the same class and its subclasses.
+Default (or Package-Private): Members that are accessible within the same package.
