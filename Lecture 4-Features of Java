@@ -1,0 +1,67 @@
+Features of JAVA:
+
+1-Simple
+Java is easy to learn because its syntax is simple.
+Based on C++: Java's syntax is based on C++, making it easier for those familiar with C++.
+No Complex Features: Java avoids complicated features like pointers and operator overloading.
+Garbage Collection: Java has automatic garbage collection, meaning it automatically removes unreferenced objects, relieving programmers from manual memory management.
+
+2-Object Oriented
+• Java is an object-oriented programming language. 
+• It is centered on creating objects, manipulating objects, and making them work together, similar to the real world. 
+• Object-oriented programming is better than procedural programming because it provides: 
+• Great flexibility • Modularity • Clarity 
+• Reusability 
+• OOPs is more secure as it provides data hiding features.
+
+3-Platform Independent
+Java is platform independent because it uses the "Write once run anywhere" feature. 
+This means that Java programs can be run on any operating system, such as Windows, Linux, Mac, or Solaris. 
+This is achieved by adding an additional layer (class file) to Java that translates the code into a platform-specific language. 
+Other languages, such as C and C++, are directly compiled into platform-specific machine codes, which means they are not platform independent.
+Java Compiler creates .class files which contain byte code.
+JVM (Java Virtual Machine) executes byte code into machine code.
+JVM itself is platform dependent. There is a separate JVM available for each operating system.
+Different JVM produces different binary code for different operating systems.
+Using byte code and different JVMs for different operating systems Java achieves its platform independence and makes software development easy to run on different platforms.
+
+4-Architecture Neutral
+Java is designed to run easily on different machines with varying hardware architectures. 
+This is because Java does not have architecture-dependent features, such as the size of primitive data types.
+For example, in C programming, the int data type occupies 2 bytes of memory in a 32-bit architecture and 4 bytes in a 64-bit architecture. 
+However, in Java, the int data type always occupies 4 bytes of memory regardless of the architecture. 
+This ensures that Java programs run consistently across different platforms.
+
+5-Portable
+Java is portable because of the Platform Independence and Architecture Neutral features of Java. 
+This makes it possible to carry the Java bytecode to any platform.
+
+6-Robust
+Java has eliminated certain types of error prone programming constructs that are found in other languages.
+Java can catch and respond to exceptional situations through exception handling, so that a program can continue its normal execution.
+Java has a strong memory allocation and garbage collection mechanism.
+Java does not support pointers, thereby eliminating the possibilities of overwriting memory and corrupting data.
+
+7-Secure
+Java is well-known for its security.
+Java does not utilize pointers explicitly.
+Java programs operate within an environment called the Sandbox.
+A security manager controls the accessibility options of a class, such as reading and writing to the local disk.
+Java uses a public key encryption system to enable secure transmission of Java applications over the internet.
+The bytecode verifier examines the classes after they are loaded.
+
+8-High Performance
+Java is relatively fast for an interpreted language, as its bytecode is close to native code.
+However, it's slower than compiled languages like C++ because it is interpreted.
+The new JVM (Java Virtual Machine) is much faster, using Just-In-Time (JIT) compilation to convert bytecode to machine code on-demand.
+
+9-Multi Threaded
+Multithreading means a single program having different independent tasks to be performed independently at the same time (concurrently).
+We can write Java programs that deal with many tasks at once by defining multiple threads.
+Multithreading is particularly useful in server applications, a server can serve multiple clients at the same time.
+In Java, threads can be created in two ways: by extending Thread class and by implementing Runnable interface.
+
+10-Distributed
+Distributed computing is where multiple computers work together on a network. 
+Java is designed to easily develop applications that use this distributed computing. 
+This makes it possible to access files from any computer on the internet by calling the correct methods.
