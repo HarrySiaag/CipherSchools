@@ -1,0 +1,51 @@
+configuring the git: 
+git config —global user.name “” git config —global user.email “” git config —list
+
+git clone (HTTPS Link of the repository)
+git status
+
+two step process to add file to github: first: git add (file name)      —> git add . (to add all files of a folder) git commit -m “some message”  publish local change to remote(github) git push origin main
+
+
+Init command git init
+git remote add origin (link)
+git remote -v  {to verify}
+git branch  {to check the branch}
+git branch -M main
+git push origin main   or  git push -u origin main {if working on same project for long} {then for next time simply use git push}
+
+
+Branches
+git branch
+git branch -M main {to rename branch}
+git checkout (branch name)  {to navigate}
+git checkout -b (new branch name) {to create new branch}
+git checkout -b (branch name) {to delete branch} git push origin (branch name)
+ 
+Merging code
+git diff (branch name)  {to compare two branches}
+git merge (branch name) or 
+create a PR(pull request)
+
+
+
+Pull git pull origin main
+
+
+
+Undoing changes
+case 1:(stage changes) {changes that are added but not commit}
+git reset (file name) git reset {to reset changes in all files}
+
+case 2:(committed changes for one commit)
+git reset HEAD~1
+git log {to check all your commits}
+
+case 3:(committed changes for multiple commits)
+git reset (commit hash)
+git reset —hard (commit hash) {to undo changes in your editor}
+
+
+
+Fork {rough copy of your original project}
+ 
