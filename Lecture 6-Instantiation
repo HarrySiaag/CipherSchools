@@ -1,0 +1,25 @@
+-Instantiation Process
+
+Student s = new Student();
+
+creating a variable to store the reference of the object
+creating object with new keyword
+assigning the reference of created object to the variable
+
+
+-Heap and Stack Memory
+
+Heap Memory:
+Dynamic Memory Allocation: Heap memory is used to store objects and their instance variables. 
+The memory is allocated dynamically at runtime, and the size of the heap can grow or shrink as objects are created and garbage collected.
+Global Access: Objects stored in the heap can be accessed from anywhere in the program, making it a global memory space.
+Stack Memory:
+Method Invocation and Local Variables: Stack memory is used to store method invocation frames, which include local variables, method parameters, and return addresses. 
+Each time a method is called, a new frame is created on the stack.
+LIFO (Last-In-First-Out) Order: The stack follows a LIFO order, meaning that the last method called is the first one to be returned from, and its frame is removed from the stack.
+
+-Garbage collection
+The heap is subject to garbage collection, which is the process of automatically freeing up memory occupied by objects that are no longer referenced. 
+The stack, on the other hand, is not garbage collected, as its memory is managed by the JVM's method invocation and return mechanism.
+
+
