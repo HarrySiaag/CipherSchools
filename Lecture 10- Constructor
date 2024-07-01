@@ -1,0 +1,14 @@
+
+METHOD AREA
+
+Keyword-super
+
+-Used to refer the base class of the class in which it is being used.
+-Keyword super is used to refer immediate parent class "object". 
+ When we create the object of a subclass, an object of parent class is created implicitly. 
+ Only instance methods and constructors can use this keyword.
+-The keyword super can be used in the following situations:
+ • To refer instance variable of immediate parent class
+ • To invoke methods of immediate parent class
+ • To invoke constructor of immediate parent class
+
