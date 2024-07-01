@@ -1,0 +1,122 @@
+
+IMPLEMENTATION
+
+1. Main within the same class
+
+class Student {
+int rollno;
+String name;
+public static void main(String[] args) {
+Student s1=new Student);
+Student s2=new Student);
+Student s3=new Student); 
+s1.rollno=1;
+s2.name="Alex";
+System.out.println(s1.rollno);
+System.out.println(s2.name);
+System.out.println(s3.name);
+}
+
+2. Main in different class
+
+class Student {
+int rollno;
+String name;
+}
+class MainClass
+{
+public static void main(String[] args){
+Student s1=new Student();
+Student s2=new Student();
+Student s3=new Student(); 
+s1.rollno=1;
+s2.name="Alex";
+System.out.println(s1.rollno);
+System.out.println(s2.name);
+System.out.println(s3.name);
+}
+}
+
+
+TYPES OF VARIABLES
+
+1.Local Referance Variable
+
+Declared within the method in a class or taken as an argument.
+Occupy memory on stack.
+Will be destroyed when the control leaves the method and the associated object will be eligible for garbage collection.
+
+2.Instance Referance Variable
+
+Declared outside the methods in a class.
+Occupy memory on heap.
+Will be retained in memory till the object is alive.
+
+
+INHERITANCE
+
+One of the most important features of OOP.
+
+ Using inheritance, we can create new classes from already existing classes.
+ Existing classes from which new classes are derived are called base/parent/super classes.
+ New classes are called derived/child/sub classes.
+ Derived class inherits all the fields and methods from base class and can add their
+ own elements.
+ Code Reusability is the main benefit of Inheritance.
+
+1.Single level inheritance
+
+class A -> class B
+
+2.Multi-level inheritance
+
+class A -> class B -> class C
+
+3.Hierarchical inheritance
+
+class B -|
+         |--> class A
+class C -|
+
+4.Hybrid inheritance
+
+class B -|
+         |--> class A -> class D
+class C -|
+
+5.Multiple inheritance
+
+NOT ALLOWED IN JAVA
+
+e.g. Diamond Problem
+
+
+           |- class B -|
+class D -->|           |--> class A 
+           |- class C -|
+
+
+
+//code implementing inheritance
+
+class Shape{ //Parent class, Base class, Super class
+    double pi = 3.14;
+    double getSquare(int r){
+        return r*r;
+    }
+}
+
+class Circle extends Shape{ //Child class, Derived class, Sub class
+    void area(int r){
+        System.out.println(pi*getSquare(r));
+    }
+}
+
+public class InheritanceStudy{
+    public static void main(String[] args){
+        Circle c = new Circle();
+        c.area(5);
+    }
+}
+
+
