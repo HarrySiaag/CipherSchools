@@ -1,0 +1,81 @@
+
+STATIC VARIABLES AND ABSTRACT CLASS
+
+Variables can be declared static using keyword static.
+• We know that non static variables and methods belong to instance.
+• On contrary, static members(variables, methods) belong to class. They are not part of any instance of the class.
+• Static members can be accessed using the class name, even without creating instance of the class.
+• They are also called static variables. They occupy single location in the memory.
+
+Methods can be declared static using keyword static.
+> Static methods are also called class methods.
+> Static methods belong to class. It can be used with class name directly, can also be accessed using instance references.
+> Static methods use static variables only, whereas non-static methods can use both instance variables & static variables.
+> These are used to perform some common task for all objects.
+
+What is Abstraction?
+> Data abstraction is the process of hiding certain details and showing only essential information to the user.
+> For e.g. We know that all cars must accelerate, brake, blow horn etc. 
+  But we don't know what exactly happens when we press the accelerator, how the acceleration will be achieved. This is Abstraction.
+> Abstraction can be achieved using abstract classes or interfaces.
+
+Abstract Method
+> Method declared but not Implemented are called abstract method.
+> abstract methods do not have a body but terminate with a semicolon.
+> The keyword abstract must be used in the signature of the method.
+> final and static methods cannot be declared abstract.
+Syntax:
+abstract [accessibility specifier] [return type] methodName(Parameter);
+
+Abstract Class
+> A class containing abstract methods is called abstract class. Keyword abstract must be used in the class declaration, else compiler will throw an error.
+• Abstract class cannot be instantiated.
+Syntax: abstract className{}
+> Abstract Methods are used to force the subclasses to provide the implementation by defining the body.
+> If any sub class does not implement all the abstract methods of parent class, it will also be treated as abstract.
+> Concrete class means a non-abstract class, i.e. if a class is not abstract then it is concrete.
+> A class without any abstract methods can also be declared as abstract which leads us to the conclusion that, abstract classes may also contain concrete methods.
+
+//code
+
+abstract class Car
+{
+    int maxSpeed;
+    abstract void accelerate(); // Only Declared but not implemented it is without a body
+    // They are created to force the child classes to implement them before using, We will use them after overriding
+    abstract void brake();
+}
+abstract class BMW extends car {
+    void accelerate() {
+        System.out.println("BMW is accelerating");
+    }
+}
+
+class BMW2 extends BMW{
+    void brake() {
+        System.out.println("BMW is applying Brakes");
+    }
+｝
+
+abstract class A{//An abstract class can exist without. abstract methods
+    //We simply mean we will not be able to create object of this class.
+    
+    int x = 10;
+    void fun() //Abstract Class can have concrete methods
+    {
+    System.out.println("Hello, I'm A");
+    }
+}
+
+public class AbstractStudy {
+
+    public static void main(String[] args){
+        // Car c = new Car(); //Cannot instantiate an abstract class
+        // BMW beemer = new BMW();
+        // beemer.accelerate();
+
+        BMW2 b = new BMW2();
+        b.accelerate();
+        b.brake();
+    }
+}
