@@ -1,0 +1,79 @@
+
+STRINGS
+
+Strings in Java
+
+In Java, a String is a sequence of characters, such as letters, digits, or symbols. 
+It is a non-primitive data type, meaning it is a class in Java. The String class is a part of the Java Standard Library, and it provides a wide range of methods for manipulating and operating on strings.
+
+Key Characteristics:
+
+Immutability: Strings in Java are immutable, meaning once a string is created, its contents cannot be changed.
+Object-oriented: Strings are objects, and as such, they have their own set of methods and properties.
+** Unicode support**: Java strings support Unicode characters, allowing for internationalization and localization.
+Common String Operations:
+
+Concatenation: Strings can be concatenated using the + operator or the concat() method.
+Length: The length of a string can be obtained using the length() method.
+Substring: A substring can be extracted using the substring() method.
+Searching: Strings can be searched using methods like indexOf() and contains().
+Conversion: Strings can be converted to other data types, such as integers or characters, using methods like parseInt() and charAt().
+String Literals:
+
+In Java, string literals are enclosed in double quotes (") and can be used directly in code. For example: String greeting = "Hello, World!";
+
+String Methods:
+
+Some commonly used string methods in Java include:
+
+toUpperCase(): Converts a string to uppercase.
+toLowerCase(): Converts a string to lowercase.
+trim(): Removes leading and trailing whitespace from a string.
+split(): Splits a string into an array of substrings based on
+
+
+
+//code
+
+public class StringStudy
+{
+    public static void main(String[] args)
+    {
+        String name = "CipherSchools";
+        String name2 = "CipherSchools";
+
+        String name3 = new String("CipherSchools");
+        String name4 = new String("CipherSchools");
+       
+        System.out.println(name==name2);
+        System.out.println(name3==name4);
+        System.out.println(name==name3);
+
+        
+        System.out.println("*****************************************");
+        System.out.println("1. CONCATENATION");
+        String s1 = "Hello";
+        s1 = s1+" Peeps";
+        System.out.println(s1);
+        System.out.println(s1 + " How are you doing");
+        System.out.println(s1); 
+   
+//      Another way to concatenate    
+        String s2 = new String("Hello");
+        String s3 = new String(" People");
+        String s4 = s2.concat(s3);
+        System.out.println(s4);
+        System.out.println(s2);
+
+        System.out.println("*****************************************");
+        System.out.println("2. CHECKING IF STRINGS ARE EQUAL IN VALUE");
+        System.out.println(name.equals(name2));
+        System.out.println(name.equals(name3));
+
+        System.out.println("*****************************************");
+        System.out.println("3. CREATING NEW STRING OBJECT FROM CHARACTER ARRAY");
+        char arr[] = {'C','I','P','H','E','R'};
+        String strFromArr = new String(arr);
+        System.out.println(strFromArr);
+   }
+}
