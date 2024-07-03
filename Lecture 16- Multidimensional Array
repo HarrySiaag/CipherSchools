@@ -1,0 +1,43 @@
+
+MULTIDIMENTIONAL ARRAYS
+
+In Java, a multidimensional array is an array of arrays, where each element is another array. 
+This allows for the creation of complex data structures that can store and manipulate large amounts of data. 
+Multidimensional arrays are declared using multiple sets of square brackets [], with each set representing a dimension. 
+For example, a 2D array would be declared as int[][] myArray, while a 3D array would be declared as int[][][] myArray. 
+Elements in a multidimensional array can be accessed using nested indexing, such as myArray[0][1] to access the element at the first row and second column of a 2D array. 
+Multidimensional arrays are commonly used in Java to represent matrices, tables, and other complex data structures.
+
+//cdoe
+
+public class MultiDimArrays
+{
+    public static void main(String[] args)
+    {
+        int rows = 5;
+        int cols = 3;
+        int arr[][] = new int[rows][cols];
+
+        for(int i=0; i<arr.length; i++)
+        {
+             for(int j=0;j<arr[0].length;j++)
+             {
+                 System.out.print(arr[i][j]+" ");
+             } 
+             System.out.println();
+        }
+
+        System.out.println("*****************");
+
+//      Array Initializers List
+        int arr2[][]={{1,2,3},{4,5,6},{7,8,9}};
+        for(int i=0; i<arr2.length; i++)
+        {
+             for(int j=0;j<arr2[0].length;j++)
+             {
+                 System.out.print(arr2[i][j]+" ");
+             } 
+             System.out.println();
+        }
+    }
+}
