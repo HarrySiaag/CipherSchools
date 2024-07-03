@@ -1,0 +1,65 @@
+
+LINKED LIST
+
+
+
+Linked List in Java
+
+A Linked List is a fundamental data structure in Java that consists of a sequence of nodes, 
+each containing a value and a reference (i.e., a "link") to the next node in the list. 
+This dynamic structure allows for efficient insertion, deletion, and traversal of elements, making it a popular choice for many applications. 
+In Java, a Linked List can be implemented using a Node class, which has a value field and a next field that points to the next node in the list. 
+The LinkedList class in Java's java.util package provides a built-in implementation of a doubly-linked list, 
+which supports operations like add, remove, and get in O(1) time complexity. 
+By using a Linked List, you can create flexible and scalable data structures that can grow or shrink dynamically, making it an essential tool in many Java applications.
+
+//code
+
+package linkedlists;
+
+class Node{
+    int data;
+    Node next;
+    Node(int data)
+    {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class MyLL
+{
+    static void print(Node head)
+    {
+        while(head != null)
+        {
+            System.out.print(head.data + " ");
+            head = head.next;
+        }
+        System.out.println();
+    }
+    public static void main(String[] args)
+    {
+        Node head = new Node(5);
+        Node second = new Node(6);
+        head.next = second;
+        Node third = new Node(7);
+        second.next = third;
+        Node fourth = new Node(8);
+        second.next = fourth;
+        Node fifth = new Node(9);
+        second.next = fifth;
+
+        Node temp = head;
+        while(temp != null)
+        {
+            System.out.println(temp.data);
+            temp = temp.next;
+        }
+        System.out.println(temp);
+        
+        print(head);
+        print(head);
+
+    }
+}
