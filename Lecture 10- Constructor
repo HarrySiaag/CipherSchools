@@ -1,14 +1,99 @@
 
-METHOD AREA
+CONSTRUCTORS
 
-Keyword-super
+The constructor of base class will always run before the constrictor of the child class
+so as to initialize any variable in parent class that might be required in the child class.
 
--Used to refer the base class of the class in which it is being used.
--Keyword super is used to refer immediate parent class "object". 
- When we create the object of a subclass, an object of parent class is created implicitly. 
- Only instance methods and constructors can use this keyword.
--The keyword super can be used in the following situations:
- • To refer instance variable of immediate parent class
- • To invoke methods of immediate parent class
- • To invoke constructor of immediate parent class
+//code
 
+
+class loan {
+    int rate;
+    loan () {
+        System.out.println("Hi, I'm default constructor of loan");
+    }
+    loan (int rate) {
+        this.rate = rate;
+    }
+    void printRate() {
+        System.out.println(this.rate);
+    }
+}
+
+class carLoan extends loan {
+    int rate;
+
+    carLoan() {
+        System.out.println("Hi, I'm default constructor of carLoan");
+        System.out.println(super.rate); //1 - Using super to access instance variable of parent class
+    }
+    carLoan(int rate){
+        super(7); // 3 - To invoke the constructor of parent class(must be 1st line of child constructor)
+        this.rate = rate;
+    }
+    void printRate (){
+        System.out.println(this.rate);
+        super.printRate(); // 2 - Using super to invoke methods of the parent class 
+        System.out.println(super.rate);
+    }
+}
+
+public class SuperStudy {
+    
+    public static void main (String[] args) {
+        
+        carLoan cl2 = new carLoan();
+        carLoan cl = new carLoan(8);
+        cl.printRate();
+
+    }
+}
+
+
+final Method, class and Variable 
+
+Methods can be declared final using keyword final.
+• Final methods cannot be overridden in subclasses. Static methods may also be
+  declared final to prevent from overriding.
+Classes can be declared final using keyword final.
+• Final Classes cannot be inherited.
+• Not necessary for a final class to have final methods.
+• Final class cannot have abstract methods.
+Variables can be declared final using keyword final.
+• Value assigned to final variable once cannot be changed.
+• Final variables must be initialized either at declaration time or inside constructors.
+
+//code
+
+class A{
+    final int noOfAlphabets = 26; //Final Variables - Value once assigned cannot be changed
+    final int noOfDigits;
+    //Either assign the value at time of declaration or assign the value inside constructors
+    A()
+    {
+        noOfDigits = 10;
+    }
+    final void fun()
+    {
+        System.out.println("Hi, I'm a function in class A");
+    }
+}
+
+final class B extends A //Final classes cannot be inherited
+{
+// void fun()
+// {
+//      System.out.println("I'm function in B overriding function in A");
+// }
+}
+
+//class C extends B{
+//
+//}
+
+public class FinalStudy {
+
+    public static void main(String[] args){
+        
+    }
+}
