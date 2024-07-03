@@ -1,0 +1,37 @@
+
+ARRAYS PART-1
+
+Normally, an array is a collection of similar type of elements which has a contiguous memory location.
+
+The array is an indexed collection of a finite number of homogenous elements.
+
+Java array is an object which contains elements of a similar data type. 
+Additionally, The elements of an array are stored in a contiguous memory location.
+It is a data structure where we store similar elements.
+We can store only a fixed set of elements in a Java array.
+
+Array in Java is index-based, the first element of the array is stored at the 0th index, 2nd element is stored on the 1st index, and so on.
+
+1. Declaration and Initialization
+
+In Java, an array is declared by specifying the type of elements it will hold, followed by square brackets []. 
+For example: int[] myArray;. To initialize an array, you can use the new keyword followed by the type and size of the array, like this: int[] myArray = new int[5];. 
+This creates an array of 5 integers.
+
+2. Indexing and Accessing Elements
+
+Arrays in Java are 0-indexed, meaning the first element is at index 0, and the last element is at index length - 1. 
+You can access an element at a specific index using the square brackets [] and the index value, like this: myArray[0] = 10;. 
+This sets the first element of the array to 10.
+
+3. Array Length
+
+In Java, the length of an array is fixed and cannot be changed after it's created. 
+You can get the length of an array using the length property, like this: int length = myArray.length;. 
+This returns the number of elements in the array.
+
+4. Default Values
+
+When an array is created, its elements are initialized with default values. 
+For example, an int array will have all elements initialized to 0, a boolean array will have all elements initialized to false, 
+and an Object array will have all elements initialized to null.
