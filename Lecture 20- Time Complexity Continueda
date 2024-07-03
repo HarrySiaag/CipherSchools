@@ -1,0 +1,31 @@
+
+TIME COMPLEXITY
+
+
+Big oh notation (O) 
+Upper bound: It gives the maximum time or space complexity of an algorithm.
+It's an asymptotic upper bound, meaning it's a worst-case scenario.
+It's usually used to describe the complexity of an algorithm, e.g., "The time complexity of this algorithm is O(n^2)".
+It's an upper bound, so it might not be a tight bound, but it's guaranteed not to exceed it.
+Example: If an algorithm has a time complexity of O(n^2), it means the time taken will not exceed n^2, but it could be less.
+0 <= f(n) <= Cg(n) for all n >= n0
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Big Omega notation (Ω) 
+Lower bound: It gives the minimum time or space complexity of an algorithm.
+It's an asymptotic lower bound, meaning it's a best-case scenario.
+It's usually used to describe the complexity of an algorithm, e.g., "The time complexity of this algorithm is Ω(n)".
+It's a lower bound, so it might not be a tight bound, but it's guaranteed not to be less than it.
+Example: If an algorithm has a time complexity of Ω(n), it means the time taken will not be less than n, but it could be more.
+0 <= Cg(n) <= f(n) for all n >= n0
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ Big Theta notation (Θ) 
+Exact bound: It gives the exact time or space complexity of an algorithm.
+It's an asymptotic tight bound, meaning it's a precise measure of the complexity.
+It's usually used to describe the complexity of an algorithm, e.g., "The time complexity of this algorithm is Θ(n log n)".
+It's a tight bound, so it's a precise measure of the complexity, not an upper or lower bound.
+Example: If an algorithm has a time complexity of Θ(n log n), it means the time taken is exactly proportional to n log n.
+0 <= C2g(n) <= f(n) <= C1g(n) for n >= n0
