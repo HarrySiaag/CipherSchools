@@ -1,0 +1,124 @@
+
+JAGGERED ARRAYS AND SCANNER CLASS
+
+
+
+Jagged Arrays in Java
+
+In Java, a jagged array is an array of arrays, where each inner array can have a different length. 
+Unlike a 2D array, where each row has the same number of columns, a jagged array allows for varying lengths of inner arrays. 
+This flexibility makes jagged arrays useful for representing complex data structures, such as matrices with varying row lengths. 
+Jagged arrays are declared using multiple pairs of square brackets, with each pair representing a dimension. For example, int[][] jaggedArray = new int[3][]; 
+declares a jagged array with 3 rows, where each row is an array of integers. The length of each inner array can be set individually, allowing for a jagged structure.
+
+//code
+
+public class JaggedArrays
+{
+    static void printJaggedArray(int arr[][])
+    {
+        for(int i=0; i<arr.length; i++)
+        {
+             for(int j=0;j<arr[i].length;j++)
+             {
+                 System.out.print(arr[i][j]+" ");
+             } 
+             System.out.println();
+        }
+    }
+    public static void main(String[] args)
+    {
+        int arr[][] = new int[3][];
+        arr[0] = new int[3];
+        arr[1] = new int[2];
+        arr[2] = new int[3];
+
+        printJaggedArray(arr);
+
+        int arr2[][] = new int[3][];
+//      arr2[0]={1,2,3};
+//      arr2[1]={2,3};
+//      arr2[2]={4,5,6};
+
+        arr2[0]=new int[] {1,2,3};
+        arr2[1]=new int[] {2,3};
+        arr2[2]=new int[] {4,5,6};
+        System.out.println("****************************");
+        printJaggedArray(arr2);
+    }
+}
+
+
+
+
+Scanner Class in Java
+
+The Scanner class in Java is a utility class used for parsing and scanning input data from various sources, such as the console, files, or strings. 
+It provides a convenient way to read input data in a flexible and efficient manner. 
+The Scanner class uses regular expressions to match and extract data from the input source. 
+It can be used to read primitive types, such as integers and strings, as well as more complex data structures, like arrays and objects. 
+The Scanner class is commonly used for reading user input from the console, parsing configuration files, and extracting data from log files. 
+Its methods, such as nextLine(), nextInt(), and next(), allow for easy extraction of data, making it a popular choice for input processing in Java applications.
+
+//code
+
+import java.util.*;
+
+public class ScannerStudy
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your name: ");
+        String firstname = sc.next();
+        String lastname = sc.next();
+        System.out.println("Please enter your profession: ");      
+        String profession = sc.next();
+        System.out.println("Please enter your profession: "); 
+        sc.nextLine();     
+        String address = sc.nextLine();
+        System.out.println("Please enter your number: ");
+        int number = sc.nextInt(); 
+
+        
+
+
+        System.out.println("First Name: "+firstname);  
+        System.out.println("Last Name: "+lastname);  
+        System.out.println("Profession: "+profession); 
+        System.out.println("Address: "+address); 
+        System.out.println("Number: "+number); 
+         
+    }
+}
+
+----------------Scanner2----------------
+import java.util.*;
+
+public class ScannerStudy2
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter your first name: ");
+        String firstname = sc.nextLine();
+        System.out.println("Please enter your last name: ");
+        String lastname = sc.nextLine();
+        System.out.println("Please enter your profession: ");      
+        String profession = sc.nextLine();
+        System.out.println("Please enter your profession: ");     
+        String address = sc.nextLine();
+        System.out.println("Please enter your number: ");
+        int number = sc.nextInt(); 
+
+        
+
+
+        System.out.println("First Name: "+firstname);  
+        System.out.println("Last Name: "+lastname);  
+        System.out.println("Profession: "+profession); 
+        System.out.println("Address: "+address); 
+        System.out.println("Number: "+number); 
+         
+    }
+}
