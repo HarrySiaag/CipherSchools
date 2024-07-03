@@ -1,0 +1,90 @@
+
+RECURSION
+
+Recursion in Java
+
+Recursion is a programming technique in which a method calls itself repeatedly until it reaches a base case that stops the recursion. 
+In Java, recursion is a powerful tool for solving complex problems, particularly those that have a recursive structure.
+
+Key Concepts:
+
+Recursive Method: A method that calls itself is known as a recursive method.
+Base Case: A condition that stops the recursion and prevents the method from calling itself indefinitely.
+Recursive Call: The method call that invokes the recursive method again.
+How Recursion Works:
+
+The recursive method is called with an initial input.
+The method checks for the base case. If it's true, the method returns.
+If the base case is false, the method calls itself with a modified input.
+Steps 2-3 repeat until the base case is true.
+The method returns, and the recursive calls unwind, returning the final result.
+
+
+//code
+
+//RecursionStudy
+
+
+public class RecursionStudy
+{
+    static void printDescending(int n)
+    {
+        if(n<1) return;
+        System.out.println(n);
+        printDescending(n-1);
+    }
+    public static void main(String[] args)
+    {
+        int n=5;
+        printDescending(n);
+    }
+}
+
+//Fibonacci
+
+public class Fibonacci
+{
+    static int fib(int n)
+    {
+        if(n<2) return n;
+        int a = fib(n-1);
+        int b = fib(n-2);
+        return a+b;
+
+    }
+    public static void main(String[] args)
+    {
+        int n=7;
+        System.out.println(fib(n));   
+    }
+}
+
+//BinarySearchWithoutRecursion
+
+public class BinarySearchWithoutRecursion
+{
+    public static void main(String[] args)
+    {
+        int arr[] = {2,5,8,12,16,23,38,56,72};
+        int x = 23;
+        int l = 0;
+        int r = arr.length-1;
+        while(l<=r)
+        {
+            int mid = (l+r)/2;
+            if(arr[mid]==x)
+            {
+                System.out.println("Value found at index : "+mid);
+                return;
+            }
+            else if(x<arr[mid])
+            {
+                r = mid-1;
+            }
+            else{
+                l = mid+1;
+            }
+        }
+        System.out.println("Value not found: ");
+    }
+}
