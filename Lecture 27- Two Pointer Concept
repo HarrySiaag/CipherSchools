@@ -1,0 +1,44 @@
+
+TWO POINTERS CONCEPT
+
+The Two Pointers concept is a popular technique used in Java to solve various algorithmic problems, particularly those involving arrays and linked lists. 
+The idea is to use two pointers, often referred to as left and right, to traverse a data structure from both ends or from a specific starting point. 
+By moving these pointers in a coordinated manner, you can efficiently find a target element, detect duplicates, or solve other problems that require 
+comparing or processing elements in a specific order. For example, in a sorted array, you can use two pointers to find a pair of elements that add up to a target sum. 
+The left pointer starts at the beginning of the array, and the right pointer starts at the end. 
+By moving the pointers towards each other, you can find the desired pair in O(n) time complexity. 
+The Two Pointers concept is a powerful tool in Java, enabling you to write efficient and scalable algorithms for a wide range of problems.
+
+
+//code
+
+public class TwoPointer
+{
+    public static void main(String[] args)
+    {
+        int arr[] = {10,20,35,50,75,80};
+        int x = 95;
+        int l = 0;
+        int r = arr.length - 1;
+        boolean found = false;
+        while(l<r)
+        {
+            int sum = arr[l] + arr[r];
+            if(sum==x)
+            {
+                System.out.println("Found"+x+" as sum of values on index: "+l+" and index: "+r);
+                return;
+            }
+            else if(sum<x)
+            {
+                l++;
+            }
+            else
+            {
+                r--;
+            }
+        }
+        if(!found)
+        System.out.println("Sum not found: ");
+    }
+}
