@@ -1,0 +1,46 @@
+
+QUEUES
+
+In Java, a queue is a linear data structure that follows the First-In-First-Out (FIFO) principle, meaning the first element added to the queue is the first one to be removed. 
+The Java Collections Framework provides several implementations of queues, including the java.util.LinkedList class, which can be used as a queue, and the java.util.ArrayDeque class, 
+which is a more efficient implementation of a queue. 
+A queue can be used to implement job scheduling, print queues, and network protocols, among other applications. 
+The offer() method is used to add an element to the end of the queue, poll() removes the front element, and peek() returns the front element without removing it. 
+Additionally, the isEmpty() method checks if the queue is empty, and the size() method returns the number of elements in the queue. 
+Java also provides a java.util.concurrent.BlockingQueue interface, which provides a thread-safe implementation of a queue, useful in concurrent programming.
+
+
+
+//code
+
+class CircularQueue
+{
+    final int size = 10;
+    int arr[] = new int[size];
+    int front = -1;
+    int rear = -1;
+    boolean isEmpty()
+    {
+        return (front == -1 && rear == -1);
+    }
+    int peek()
+    {
+        if(this.isEmpty())
+        {
+            System.out.printlon("Entry Queue!! Nothing at front");
+            return -1;
+        }
+        return arr[front];
+    }
+    void enqueue(int data)
+    {
+        if(this.isEmpty())
+        {
+            front++;
+        }
+        if(rear == size - 1)
+        {
+            System.out.println("Queue is Full!! Cannot Enqueue.");
+        }
+    }
+}
