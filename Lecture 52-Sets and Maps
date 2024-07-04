@@ -1,0 +1,94 @@
+
+SETS AND MAPS
+
+
+
+
+Sets in Java
+
+In Java, a Set is a collection of unique elements, meaning no duplicates are allowed. 
+Sets are part of the Java Collections Framework and are used to store a group of objects. 
+
+
+Here are some key characteristics of Sets in Java:
+No duplicates: Sets do not allow duplicate elements.
+Unordered: The order of elements in a Set is not guaranteed.
+Fast lookup: Sets provide fast lookup, insertion, and removal of elements.
+Some common Set implementations in Java include:
+HashSet: A basic implementation of a Set that uses a hash table for storage.
+LinkedHashSet: A Set that preserves the order of elements and uses a linked list for storage.
+TreeSet: A Set that sorts elements in a specific order (e.g., natural order or custom comparator).
+
+
+Maps in Java
+
+In Java, a Map is a collection of key-value pairs, where each key is unique and maps to a specific value. 
+Maps are also part of the Java Collections Framework and are used to store and retrieve data. Here are some key characteristics of Maps in Java:
+
+Key-value pairs: Maps store data as key-value pairs.
+Unique keys: Each key in a Map is unique.
+Fast lookup: Maps provide fast lookup, insertion, and removal of key-value pairs.
+
+Some common Map implementations in Java include:
+HashMap: A basic implementation of a Map that uses a hash table for storage.
+LinkedHashMap: A Map that preserves the order of key-value pairs and uses a linked list for storage.
+TreeMap: A Map that sorts key-value pairs in a specific order (e.g., natural order or custom comparator).
+
+Common Operations
+
+Both Sets and Maps support common operations such as:
+add() or put(): Adds an element or key-value pair to the collection.
+remove(): Removes an element or key-value pair from the collection.
+contains(): Checks if an element or key is present in the collection.
+size(): Returns the number of elements or key-value pairs in the collection.
+
+When to Use:
+Use a Set when you need to store a collection of unique elements and don't care about the order.
+Use a Map when you need to store key-value pairs and need to look up values by their corresponding keys.
+
+
+//code
+
+
+import java.util.*;
+public class SetImp1
+{
+    public static void main(String[] args)
+    {
+        Set<Integer> s = new HashSet<>();
+        System.out.println(s.size());
+        System.out.println(s.isEmpty());
+        s.add(1);
+        s.add(2);
+        s.add(3);
+        System.out.println(s.contains(2));
+        System.out.println(s.contains(4));
+        System.out.println(s.size());
+        System.out.println(s.contains(3));
+        s.remove(3);
+        System.out.println(s.contains(3));
+        System.out.println(s.size());
+        s.add(2);
+        System.out.println(s.size());
+        s.clear();
+        System.out.println(s.size());
+
+        for(int i=0;i<n;i++)
+        {
+            System.out.println("Please enter " + (i+1) + " element: ");
+            arr[i] = sc.nextInt();
+        }
+        System.out.print("Array is: ");
+
+        for(int i=0;i<n;i++)
+        {
+            System.out.println(arr[i] + " ");
+        }
+        
+        for(Integer x:s)
+        {
+            System.out.print(x + " ");
+        }
+        sc.close();
+    }
+}
