@@ -1,0 +1,37 @@
+
+DATA STRUCTURES
+
+
+
+What are Data Structures in Java?
+In Java, data structures are ways to organize and store data in a program so that it can be efficiently accessed, modified, and manipulated. Data structures provide a means to manage large amounts of data in a structured and efficient manner.
+
+Types of Data Structures in Java:
+Arrays: A fixed-size, homogeneous collection of elements of the same data type.
+Linked Lists: A dynamic collection of elements, where each element points to the next element.
+Stacks: A Last-In-First-Out (LIFO) data structure, where elements are added and removed from the top.
+Queues: A First-In-First-Out (FIFO) data structure, where elements are added to the end and removed from the front.
+Trees: A hierarchical data structure, where each node has a value and zero or more child nodes.
+Graphs: A non-linear data structure, where nodes are connected by edges.
+Hash Tables: A data structure that maps keys to values using a hash function.
+Heaps: A specialized tree-based data structure that satisfies the heap property.
+Java Collections Framework (JCF):
+
+The Java Collections Framework (JCF) provides a set of pre-built data structures and algorithms for working with collections of objects. The JCF includes:
+Interfaces: Such as Collection, List, Set, Map, etc.
+Classes: Such as ArrayList, LinkedList, HashSet, HashMap, etc.
+Algorithms: Such as sorting, searching, and iterating over collections.
+Key Concepts:
+
+Big-O Notation: A measure of the time and space complexity of algorithms.
+Trade-offs: Balancing factors such as time complexity, space complexity, and ease of implementation.
+Data Structure Operations: Such as insertion, deletion, searching, and traversal.
+
+Common Use Cases:
+Data Storage: Storing and retrieving data in a program.
+Algorithm Implementation: Implementing algorithms that require specific data structures.
+Performance Optimization: Optimizing program performance by choosing the right data structure.
+
+
+
+
