@@ -1,0 +1,68 @@
+
+TREES
+
+
+
+What is a Tree in Java?
+In Java, a Tree is a data structure composed of nodes, where each node has a value and zero or more child nodes. The topmost node is called the root node, and the nodes that are directly below a node are called its children. Trees are used to represent hierarchical relationships between data.
+
+Types of Trees in Java:
+Binary Tree: A binary tree is a tree where each node has at most two children, referred to as the left child and the right child.
+B-Tree: A B-Tree is a self-balancing search tree that keeps data sorted and allows for efficient insertion, deletion, and search operations.
+AVL Tree: An AVL Tree is a self-balancing binary search tree that ensures the height of the tree remains relatively small by rotating nodes when the balance factor becomes too large.
+
+Common Operations on Trees in Java:
+Traversal: Traversing a tree involves visiting each node in a specific order, such as inorder, preorder, or postorder.
+Insertion: Inserting a new node into the tree while maintaining the tree's properties.
+Deletion: Removing a node from the tree while maintaining the tree's properties.
+Search: Finding a specific node in the tree.
+
+Java Implementations:
+Java provides several implementations of trees, including:
+java.util.TreeSet: A set implementation based on a tree structure.
+java.util.TreeMap: A map implementation based on a tree structure.
+javax.swing.tree.DefaultMutableTreeNode: A node implementation for building tree models.
+Key Concepts:
+
+Node: A single element in the tree, which can have a value and child nodes.
+Edge: A connection between two nodes in
+
+
+//code
+
+class node
+{
+    int data;
+    Node left;
+    Node right;
+    Node(int data)
+    {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+public class BinaryTree
+{
+    Node root;
+    BinaryTree(int data)
+    {
+        this.root = new Node(data);
+    }
+
+    int TreeSum(Node root)
+    {
+        if(root == null) return 0;
+        return root.data + TreeSum(root.left) + TreeSum(root.right);
+    }
+
+    public static void main(String[] args)
+    {
+        BinaryTree bt = new BinaryTree(2);
+        bt.root.left = new Node(3);
+        bt.root.right = new Node(5);
+        bt.root.left.right = new Node(9);
+        bt.root.right.left = new Node(7);
+    }
+}
