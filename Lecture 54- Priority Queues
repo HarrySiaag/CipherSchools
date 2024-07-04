@@ -1,0 +1,120 @@
+
+PRIORITY QUEUES
+
+
+What is a Priority Queue?
+A Priority Queue is a special type of queue that follows a specific ordering mechanism, where elements are ordered based on their priority. 
+In Java, the PriorityQueue class implements the Queue interface and provides a way to store and retrieve elements in a priority-based manner.
+
+Key Characteristics:
+Priority-based ordering: Elements in a Priority Queue are ordered based on their natural ordering (e.g., numerical or lexicographical) or a custom comparator.
+Highest priority element first: The element with the highest priority is always retrieved first from the queue.
+No guarantee of FIFO order: Unlike a regular queue, a Priority Queue does not guarantee that elements are retrieved in the order they were inserted.
+
+Java's PriorityQueue Class:
+The PriorityQueue class in Java provides an implementation of a Priority Queue. It offers the following methods:
+offer(E e): Adds an element to the queue.
+poll(): Retrieves and removes the highest priority element from the queue.
+peek(): Retrieves the highest priority element from the queue without removing it.
+size(): Returns the number of elements in the queue.
+
+
+//code
+
+public class InbuiltClassStudy
+{
+    public static void main(String[] args)
+    {
+        PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+        System.out.println(pq.isEmpty());
+        pq.add(3);
+        pq.add(4);
+        pq.add(1);
+        pq.add(9);
+        pq.add(7);
+        pq.add(2);
+        pq.add(6);
+        System.out.println(pq.isEmpty());
+        System.out.println(pq.peek());
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+        System.out.println(pq.size());
+
+    }
+}
+
+
+
+class PQArray
+{
+    final int size = 10;
+    int arr[] = new int[size];
+    int nItems = 0;
+
+    void add(int data)
+    {
+        if(isEmpty())
+        {
+            arr[0] = data;
+            nItems++;
+            return;
+        }
+        int i;
+        for(i = nItems-1;i>=0;i++)
+        {
+            if(data<arr[i])
+            {
+                arr[i+1] = arr[i];
+            }
+            else
+            {
+                arr[i+1] = data;
+                break;
+            }
+        }
+        arr[i+1];
+        nItems;
+    }
+
+    int poll()
+    {
+        return arr[--nItems];
+    }
+
+    int peek()
+    {
+        if(isEmpty()) return -1;
+        return arr[nItems - 1];
+    }
+
+    boolean isEmpty()
+    {
+        return nItems == 0;
+    }
+
+    int size()
+    {
+        return nItems;
+    }
+}
+
+public class ArrayImp1
+{
+    public static void main(String[] args)
+    {
+        PQArray pq = new PQArray();
+        System.out.println(pq.isEmpty());
+        pq.add(3);
+        pq.add(4);
+        pq.add(1);
+        pq.add(9);
+        pq.add(7);
+        pq.add(2);
+        pq.add(6);
+        System.out.println(pq.isEmpty());
+        System.out.println(pq.peek());
+        System.out.println(pq.poll());
+        System.out.println(pq.poll());
+        System.out.println(pq.size());
+    }
+}
