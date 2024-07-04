@@ -1,0 +1,50 @@
+
+IFIX, PREFIX & POSTFIX
+
+Infix Notation: 
+In infix notation, operators are placed between their operands. 
+This is the conventional notation used in arithmetic expressions. 
+For example: a + b or x * y. In Java, infix notation is used to write expressions, and the compiler evaluates them according to the operator precedence rules.
+
+Prefix Notation: 
+In prefix notation, operators are placed before their operands. 
+For example: + a b or * x y. This notation is also known as Polish notation. 
+While not commonly used in Java programming, prefix notation is used in some specialized applications, such as parsing and evaluating expressions.
+
+Postfix Notation: 
+In postfix notation, operators are placed after their operands. 
+For example: a b + or x y *. This notation is also known as Reverse Polish notation. 
+Postfix notation is used in some specialized applications, such as stack-based evaluators and calculators. 
+In Java, postfix notation can be used to implement stack-based algorithms for evaluating expressions.
+
+
+
+//code
+
+public class InfixProfix
+{
+    public static void main(String[] args)
+    {
+        String infix = "3+4*5";
+        String infix2 = "3*4+5";
+        System.out.println(infixToPost(infix));
+        System.out.println(infixToPost(infix2));
+    }
+    static String infixToPostfix(String infix)
+    {
+        String res = "";
+        Stack<Character> stack = new Stack();
+        for(int i=0;i<infix.length();i++)
+        {
+            char c = infix.charAt(i);
+            if(Character.isDigit(c))
+            {
+                res = res+c;
+            }
+            else
+            {
+                stack.push();
+            }
+        }
+    }
+}
