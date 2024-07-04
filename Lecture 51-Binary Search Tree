@@ -1,0 +1,71 @@
+
+BINARY SEARCH TREE
+
+
+Here's a short note on Binary Search Tree (BST) in Java and how it differs from a Binary Tree:
+
+Binary Search Tree (BST) in Java:
+A Binary Search Tree (BST) is a data structure in which each node has at most two children (i.e., left child and right child) and each node represents a key-value pair. 
+The main property of a BST is that for any given node, all elements in its left subtree are less than the node, and all elements in its right subtree are greater than the node.
+
+Key Properties of a BST:
+Ordered: All elements in the left subtree of a node are less than the node, and all elements in the right subtree are greater than the node.
+Unique Keys: Each node has a unique key.
+No Duplicate Keys: There are no duplicate keys in the tree
+
+
+//code
+
+class BSTNode
+{
+    int data;
+    Node left;
+    Node right;
+    Node(int data)
+    {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+public class BST{
+    BSTNode root;
+
+    BST()
+    {
+        root = null;
+    }
+
+    BST(int data)
+    {
+        this.root = new BSTNode(data);
+    }
+    
+    BSTNode search(BSTNode root, int data)
+    {
+        if(root == null) return null;
+        if(root.data == data) return root;
+        if(data<root.data)
+        {
+            return search(root.left, data)
+        }
+        else
+        {
+            return search(root.right, data)  
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        BST bst = new BST(15);
+        bst.root.left = new BSTNode(10);
+        bst.root.left.left = new BSTNode(8);
+        bst.root.left.right = new BSTNode(12);
+        bst.root.right.left = new Node(7);
+        bst.root.right.left = new BSTNode(17);
+        bst.root.right.right = new BSTNode(25);
+        BSTNode res = bst.search(bst.root, 21);
+        System.out.println();
+    }
+}
