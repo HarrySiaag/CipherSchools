@@ -1,0 +1,42 @@
+
+HEAPS
+
+
+
+
+What is a Heap?
+In Java, a heap is a specialized tree-based data structure that satisfies the heap property: the parent node is either greater than (in a max heap) 
+or less than (in a min heap) its child nodes. This structure is useful for efficient sorting, priority queuing, and graph algorithms.
+
+Types of Heaps
+
+There are two main types of heaps:
+Max Heap: In a max heap, the parent node is greater than or equal to its child nodes. This is useful for finding the maximum element in a collection.
+Min Heap: In a min heap, the parent node is less than or equal to its child nodes. This is useful for finding the minimum element in a collection.
+
+Heap Operations
+The following operations can be performed on a heap:
+Insert: Adding a new element to the heap while maintaining the heap property.
+Extract: Removing the root element (maximum or minimum) from the heap while maintaining the heap property.
+Heapify: Restoring the heap property after inserting or removing an element.
+
+Java Implementation
+Java provides a built-in implementation of heaps through the java.util.PriorityQueue class, which is a min heap. 
+You can also implement your own heap using an array or a binary tree.
+
+Common Use Cases
+Heaps are useful in various scenarios, such as:
+Priority Queuing: Heaps can be used to implement priority queues, where elements are ordered based on their priority.
+Sorting: Heaps can be used to implement efficient sorting algorithms, such as Heapsort.
+Graph Algorithms: Heaps are used in graph algorithms, such as Dijkstra's algorithm and Prim's algorithm.
+Time Complexity
+
+The time complexity of heap operations is as follows:
+
+Insert: O(log n)
+Extract: O(log n)
+Heapify: O(log n)
+
+
+//code
+
