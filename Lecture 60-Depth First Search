@@ -1,0 +1,21 @@
+
+DEPTH FIRST SEARCH
+
+
+What is Depth-First Search (DFS)?
+Depth-First Search is a graph traversal algorithm that explores a graph or a tree by visiting a node and then visiting all of its neighbors before backtracking. 
+It's called "depth-first" because it explores as far as possible along each branch before backtracking.
+
+How does DFS work in Java?
+In Java, DFS can be implemented using a recursive function or an iterative approach using a stack. 
+
+Here's a high-level outline of the steps:
+-Choose a starting node (also called the root node) in the graph.
+-Mark the starting node as visited.
+-Explore the node's neighbors that have not been visited yet.
+-Recursively visit each unvisited neighbor until all nodes have been visited.
+-Backtrack to the previous node until the starting node is reached again.
+
+
+//code
+
