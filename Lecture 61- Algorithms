@@ -1,0 +1,125 @@
+
+ALGORITHMS
+
+Dijkstra's Algorithm
+Dijkstra's Algorithm is a well-known graph search algorithm developed by Edsger W. Dijkstra in 1959. 
+It is used to find the shortest path between nodes in a graph, which can be weighted or unweighted.
+
+Key Features:
+Single-source shortest paths: Dijkstra's Algorithm finds the shortest path from a single source node to all other nodes in the graph.
+Non-negative weights: The algorithm assumes that the weights of the edges in the graph are non-negative.
+Greedy approach: Dijkstra's Algorithm uses a greedy approach, where it selects the node with the minimum distance from the source node and updates the distances of its neighbors.
+
+How it works:
+Initialize the distance of the source node to 0 and all other nodes to infinity.
+Create a priority queue to store nodes to be processed, with the source node as the first node.
+While the queue is not empty, extract the node with the minimum distance from the queue.
+Update the distances of the node's neighbors by calculating the minimum distance from the source node to each neighbor through the current node.
+Repeat steps 3-4 until the queue is empty.
+
+Time Complexity:
+The time complexity of Dijkstra's Algorithm is O(|E| + |V|log|V|) in the worst case, where |E| is the number of edges and |V| is the number of vertices in the graph.
+
+Applications:
+
+Dijkstra's Algorithm has numerous applications in:
+Network routing protocols
+Traffic navigation systems
+Resource allocation problems
+Scheduling algorithms
+
+
+
+
+//code
+
+DJKSTHRA ALGORITHM
+
+
+import java.util.*;
+
+public class Lecture61 
+{
+    public static void main(String args[])
+    {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the number of vertices");
+    int v=sc.nextInt();
+    int arr[][]=new int[v][v];
+    System.out.println("Enter the no of edges");
+    int e=sc.nextInt();
+    for(int i=0;i<e;i++)
+    {
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+
+        arr[a][b]=c;
+        arr[b][a]=c;
+    }
+
+    // for(int i=0;i<v;i++)
+    // {
+    // for(int j=0;j<v;j++)
+    // {
+
+    //     System.out.print(arr[i][j]+" ");
+    // }
+    // System.out.println();
+    // }
+
+    Dijkstra(arr,0);
+    }
+
+
+    static void Dijkstra(int arr[][],int source)
+    {
+        int v=arr.length;
+        boolean visited[]=new boolean[v];
+        Arrays.fill(visited,false);
+        int path[]=new int[v];
+        Arrays.fill(path,Integer.MAX_VALUE);
+        path[source]=0;
+        for(int i=0;i<v-1;i++)
+        {
+                int minvertex=min(path,visited);
+                visited[minvertex]=true;
+                for(int j=0;j<v;j++)
+                {
+                    if(arr[minvertex][j]!=0 && visited[j]==false)
+                    {
+                        int newpath=path[minvertex]+arr[minvertex][j];
+                        if(newpath<path[j])
+                        path[j]=newpath;
+                    }
+                }
+        }
+
+        System.out.println("Shortest paths are: ");
+        for(int i=0;i<path.length;i++)
+        {
+            System.out.print(path[i]+" ");
+        }
+    }
+
+
+    //this minvertex is to select the minimum net nearest node for visit as we know it is greedy algorithm
+    static int min(int path[],boolean visited[])
+    {
+        int minindex=-1;
+        for(int i=0;i<path.length;i++)
+        {
+            if(visited[i]!=true &&( minindex==-1 || path[minindex]>path[i]))
+            {
+                minindex=i;
+            }
+        }
+        return minindex;
+    }
+}
+
+/*
+ * Dijkstra's algorithm provide us the 
+ * single-source-shortest path
+ * means from node a(source)  to evry other node
+ */
